@@ -1,7 +1,126 @@
 @use '../util' as *;
 @use '../globals' as *;
 
-body{
+
+
+
+body {
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
+    background-color: $cream;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+main {
+    width: min(100% - 5rem, 305px);
+   hr{
+    height: 1px;
+    background-color: $cream;
+    border: none;
+
+   }
+
+   
+   
+
+
+
+
+}
+
+.balance {
+    display: flex;
+    background-color: $soft-red;
+    justify-content: space-between;
+    color:#fff;
+    border-radius: 10px;
+    padding: 10px;
+    img{
+        width: 50px;
+    }
+    line-height: 1.5;
+    p{font-size: 0.65rem;}
+    h1{
+        padding-top: 5px;
+    }
+
+}
+.chart-card{
+    background-color: #fff;
+    border-radius: 10px;
+
+    margin-top: 10px;
+    padding: 10px;
+    h1{
+        color:$dark-brown;
+        font-weight: 700;
+
+    }
+}
+.summary{
+    color: $dark-brown;
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+    p{
+        font-size: 0.65rem;
+        color: $medium-brown;
+
+    }
+    h1{
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding-top: 5px;
+    }
+    .previous-month{
+        p:first-of-type{
+            color: $dark-brown;
+            font-weight: 700;
+        }
+    }
+}
+.bars{
+  
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-end
+}
+.vertical {
+position: relative;
+
+width: 20px;
+background-color: $dark-brown;
+border-radius: 3px;
+cursor: pointer;
+&:hover span{
+    opacity: 1;
+}
+
+p{
+color: red;
+position: absolute;
+bottom:-15px;
+left: 0;
+font-size: 0.6rem;
+
+
+ }
+ span{
+transition: opacity 0.7s ease-in-out;
+
+    color: red;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    font-size: 0.6rem;
+    opacity:0;  
+
+}
+
 }
